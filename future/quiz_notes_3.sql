@@ -40,13 +40,13 @@ CREATE TABLE example (
 
 
 INSERT INTO example VALUES (0, 'a', 0, 0, '{1, 2, 3}', NULL);
-
+64
 
 INSERT INTO example VALUES (NULL, NULL, NULL, NULL, NULL, NULL);
-
+24
 
 INSERT INTO example VALUES (0, NULL, 0, NULL, '{1, 2, 3}', NULL);
-
+64
 
 INSERT INTO example VALUES (0, 'a', 0, NULL, '{1, 2, 3}', NULL);
 
