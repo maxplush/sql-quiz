@@ -24,6 +24,20 @@ CREATE TABLE example (
     e JSONB
 );
 
+/*
+* To optimize disk usage:
+* order the columns from largest to smallest.
+* 
+CREATE TABLE example (
+    d LINE, --	 	= 24 bytes
+    id INT8, -- typelen =  8 bytes
+    b INT4, --		= 4 bytes	
+    c INT2, --		= 2 bytes
+    a CHAR, --		= 1 bytes
+    e JSONB -- 		= -1 bytes === "variable size"
+);
+*/
+
 
 INSERT INTO example VALUES (0, 'a', 0, 0, '{1, 2, 3}', NULL);
 
